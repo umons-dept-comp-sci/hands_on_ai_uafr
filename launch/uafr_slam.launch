@@ -1,0 +1,15 @@
+<launch>
+  <arg name="configuration_basename" default="uafr_cartographer.lua"/>
+
+  <node name="cartographer_node" pkg="cartographer_ros"
+      type="cartographer_node" args="
+          -configuration_directory $(find uafr)/cartographer_config
+          -configuration_basename $(arg configuration_basename)"
+      output="screen">
+    <remap from="odom" to="/sensors/odom"/>
+    <remap from="imu" to="/sensors/imu"/>
+  </node>
+
+  <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"
+        type="cartographer_occupancy_grid_node"/>
+</launch>

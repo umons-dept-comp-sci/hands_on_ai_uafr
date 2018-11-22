@@ -1,0 +1,6 @@
+<launch>
+  <include file="$(find uafr)/launch/description.launch.xml"/>
+
+  <node name="rviz" pkg="rviz" type="rviz"
+        args="-d $(find uafr)/rviz/ortho.rviz"/>
+</launch>

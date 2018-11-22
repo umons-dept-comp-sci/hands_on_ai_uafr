@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package>
+  <name>uafr</name>
+  <version>0.0.42</version>
+  <description>Scripts and ressources for Uafr
+	(the Useless Autonomous Flat Rover)</description>
+
+  <maintainer email="pierre@hauweele.net">Pierre Hauweele</maintainer>
+
+  <license>BSD</license>
+
+  <author email="pierre@hauweele.net">Pierre Hauweele</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+</package>
