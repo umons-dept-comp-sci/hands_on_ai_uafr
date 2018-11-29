@@ -19,18 +19,3 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y install \
 
 # This will issue a warning that we can ignore.
 RUN rosdep update
-
-RUN cd /tmp && \
-    git clone https://github.com/google/protobuf.git && \
-    cd protobuf && \
-    git checkout tags/v3.4.1 && \
-    mkdir build && \
-    cd build && \
-    cmake -G Ninja \
-      -DCMAKE_POSITION_INDEPENDENT_CODE=ON \
-      -DCMAKE_BUILD_TYPE=Release \
-      -Dprotobuf_BUILD_TESTS=OFF \
-      ../cmake && \
-    ninja && \
-    ninja install && \
-    cd / && rm -Rf /tmp/protobuf
