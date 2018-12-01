@@ -38,13 +38,13 @@ echo "source \"$orig_dir/cartographer_ws/install_isolated/setup.bash\"" >> rosen
 mkdir catkin_ws
 cd catkin_ws
 wstool init src
-wstool set turtlebot3_msgs \
+wstool set -y turtlebot3_msgs \
   --git https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git -t src
-wstool set turtlebot3 \
+wstool set -y turtlebot3 \
   --git https://github.com/ROBOTIS-GIT/turtlebot3.git -t src
-wstool set turtlebot3_simulation \
+wstool set -y turtlebot3_simulation \
   --git https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git -t src
-wstool set uafr \
+wstool set -y uafr \
   --git https://github.com/umons-dept-comp-sci/hands_on_ai_uafr.git -t src
 wstool update -t src
 # FIXME: how to recursively clone a git repo with wstool ?
